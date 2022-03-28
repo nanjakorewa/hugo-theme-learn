@@ -183,10 +183,10 @@ select[multiple=multiple]:focus {
 }
 
 #header-wrapper {
-  background: #8451a1;
+  background: #333;
   color: #fff;
   text-align: center;
-  border-bottom: 4px solid #9c6fb6;
+  border-bottom: 0px solid #9c6fb6;
   padding: 1rem;
 }
 
@@ -206,8 +206,8 @@ select[multiple=multiple]:focus {
 .searchbox {
   margin-top: 1rem;
   position: relative;
-  border: 1px solid #915eae;
-  background: #764890;
+  border: 1px solid #666;
+  background: #555;
   border-radius: 4px;
 }
 
@@ -269,7 +269,7 @@ select[multiple=multiple]:focus {
 }
 
 #sidebar {
-  background-color: #322A38;
+  background-color: #424242;
   position: fixed;
   top: 0;
   width: 300px;
@@ -401,7 +401,7 @@ select[multiple=multiple]:focus {
 
 #sidebar ul.topics>li.parent,
 #sidebar ul.topics>li.active {
-  background: #251f29;
+  background: #29272b;
   margin-left: -1rem;
   margin-right: -1rem;
   padding-left: 1rem;
@@ -537,6 +537,7 @@ select[multiple=multiple]:focus {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
+  color: #ccc !important;
 }
 
 @media only all and (max-width: 59.938em) {
@@ -597,7 +598,7 @@ select[multiple=multiple]:focus {
 }
 
 #chapter p {
-  text-align: center;
+  text-align: left;
   font-size: 1.2rem;
 }
 
@@ -721,17 +722,39 @@ div.notices.tip p:first-child:after {
   content: 'Tip';
 }
 
+div.notices p:first-child:before {
+  position: absolute;
+  top: 2px;
+  color: #fff;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "\f02d";
+  left: 10px;
+}
+
+div.notices.document ul:first-child:before {
+  position: absolute;
+  top: 2px;
+  color: #fff;
+  font-family: "Font Awesome 5 Free";
+  font-weight: 600;
+  content: "\f02d  Document / ドキュメント";
+  left: 10px;
+}
+
 div.notices.document p {
   border-top: 30px solid rgba(4, 133, 90, 0.8);
   background: #e2ffe2;
 }
 
 div.notices.document p:first-child:after {
+  font-weight: 600;
+  font-family: "Font Awesome 5 Free";
   content: 'Document / ドキュメント';
 }
 
 div.notices.document ul {
-  border-top: 30px solid rgba(92, 184, 92, 0.8);
+  border-top: 30px solid rgba(4, 133, 90, 0.8);
   background: #E6F9E6;
 }
 
@@ -1472,4 +1495,13 @@ pre .copy-to-clipboard:hover {
 
 option {
   color: initial;
+}
+
+/* custom */
+div.budge-area {
+  display: flex;
+}
+
+div.budge-area a {
+  margin: 0.3em;
 }
